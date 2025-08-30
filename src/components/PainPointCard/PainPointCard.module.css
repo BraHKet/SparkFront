@@ -1,0 +1,120 @@
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
+    padding: 1.5rem;
+}
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
+.title {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    margin: 0;
+    color: #34495e;
+}
+.score {
+    background-color: #fdf2e2;
+    color: #e88d14;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+.score span {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #d18015;
+}
+.actions {
+    display: flex;
+    gap: 8px;
+}
+.actionBtn {
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    color: #34495e;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.postsContainer {
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+.post {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+.post strong {
+    display: block;
+    margin-bottom: 5px;
+}
+.post p {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+.post a {
+    margin-right: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
+.post span {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* --- Media Queries per dispositivi più piccoli --- */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .card { padding: 1.2rem; }
+    .title { font-size: 1.1rem; }
+    .score { padding: 4px 8px; font-size: 0.9rem; }
+    .score span { font-size: 0.75rem; }
+    .actionBtn { padding: 6px 10px; font-size: 0.85rem; }
+    .post { padding: 0.9rem; }
+    .post p { font-size: 0.9rem; }
+}
+
+/* Phablet / grandi smartphone */
+@media (max-width: 768px) {
+    .card { padding: 1rem; }
+    .title { font-size: 1rem; }
+    .score { padding: 3px 7px; font-size: 0.85rem; }
+    .score span { font-size: 0.7rem; }
+    .actionBtn { padding: 5px 8px; font-size: 0.8rem; }
+    .post { padding: 0.8rem; }
+    .post p { font-size: 0.85rem; }
+}
+
+/* Smartphone piccoli */
+@media (max-width: 480px) {
+    .card { padding: 0.8rem; }
+    .title { font-size: 0.95rem; }
+    .score { padding: 2px 6px; font-size: 0.8rem; }
+    .score span { font-size: 0.65rem; }
+    .actionBtn { padding: 4px 6px; font-size: 0.75rem; }
+    .post { padding: 0.7rem; }
+    .post p { font-size: 0.8rem; }
+    .header { gap: 10px; }
+    .checkbox { width: 18px; height: 18px; }
+}

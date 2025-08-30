@@ -1,0 +1,59 @@
+/* ResultsDisplay.module.css */
+.toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.exportButton { padding: 10px 15px; font-size: 0.9rem; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+.exportButton:disabled { background-color: #ccc; }
+.resultsList { display: flex; flex-direction: column; gap: 1rem; }
+
+.collectButton {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.collectButton:disabled {
+    background-color: #ccc;
+}
+
+
+
+.comingSoonOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.5s ease forwards, fadeOut 0.5s ease 1.5s forwards;
+}
+
+.comingSoonText {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}

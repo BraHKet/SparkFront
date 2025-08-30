@@ -1,0 +1,74 @@
+/*
+ * NUOVO STILE PREMIUM PER IL PULSANTE FEEDBACK
+ */
+.feedback-button {
+    /* --- Posizionamento --- */
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    z-index: 1000;
+
+    /* --- Layout e Spaziatura --- */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 24px;
+
+    /* --- Stile Visuale --- */
+    color: white;
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%); /* Gradiente vibrante */
+    border: none;
+    border-radius: 50px; /* Forma a pillola */
+    cursor: pointer;
+    
+    /* --- Tipografia --- */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    /* --- Ombre ed Effetti --- */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    /* --- Transizioni per le animazioni --- */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- Effetto al passaggio del mouse (Hover) --- */
+.feedback-button:hover {
+    transform: translateY(-4px) scale(1.05); /* Solleva e ingrandisce leggermente */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 5px 12px rgba(0, 0, 0, 0.1); /* Ombra più pronunciata */
+}
+
+/* --- Effetto alla pressione (Click) --- */
+.feedback-button:active {
+    transform: translateY(-1px) scale(1.02); /* Effetto "premuto" */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Stile per l'icona SVG --- */
+.feedback-button .feedback-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* --- Adattabilità per schermi piccoli --- */
+@media (max-width: 600px) {
+    /* Su mobile, il pulsante diventa un cerchio con solo l'icona */
+    .feedback-button {
+        padding: 14px;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+    }
+
+    .feedback-button span {
+        display: none; /* Nasconde il testo */
+    }
+
+    .feedback-button .feedback-icon {
+        width: 24px;
+        height: 24px;
+    }
+}

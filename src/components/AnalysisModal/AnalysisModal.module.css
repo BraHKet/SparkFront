@@ -1,0 +1,12 @@
+.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.modal { background: white; padding: 2rem; border-radius: 12px; width: 90%; max-width: 600px; position: relative; }
+.closeButton { position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #aaa; }
+.title { background-color: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 5px solid #007bff; margin: 1rem 0; font-size: 1.2rem; }
+.metrics { display: flex; justify-content: space-around; text-align: center; margin: 2rem 0; }
+.metricValue { display: block; font-size: 2.5rem; font-weight: bold; color: #007bff; }
+.metricLabel { color: #6c757d; }
+.postList { max-height: 200px; overflow-y: auto; }
+.postItem { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #eee; }
+.postItem a { color: #333; text-decoration: none; }
+.postItem a:hover { text-decoration: underline; }
+.postStats { font-size: 0.9rem; color: #888; white-space: nowrap; }
