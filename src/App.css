@@ -1,7 +1,117 @@
-/* App.css (Stili globali) */
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; background-color: #f4f7f9; color: #333; margin: 0; padding: 0; }
-.App { max-width: 900px; margin: 0 auto; padding: 2rem; }
-.App-header { text-align: center; margin-bottom: 2rem; }
-.App-header h1 { font-size: 2.5rem; color: #2c3e50; }
-.App-header p { color: #7f8c8d; }
-.error { color: #e74c3c; text-align: center; background-color: #fbeae5; padding: 1rem; border-radius: 8px; }
+/* App.css (Stili globali - VERSIONE RESPONSIVE) */
+
+/* --- Stili di Base (Desktop-first) --- */
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 
+                 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; 
+    background-color: #f4f7f9; 
+    color: #333; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 1.6; /* Migliora la leggibilità del testo */
+}
+
+.App { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 2rem; 
+}
+
+.App-header { 
+    text-align: center; 
+    margin-bottom: 2rem; 
+}
+
+.App-header h1 { 
+    font-size: 2.5rem; 
+    color: #2c3e50; 
+    margin-bottom: 0.5rem; /* Ridotto spazio sotto il titolo principale */
+}
+
+/* Aggiunto stile per il sottotitolo, se presente */
+.App-header h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    font-weight: 400; /* Meno pesante del titolo principale */
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.App-header p { 
+    color: #7f8c8d; 
+    font-size: 1.1rem; /* Leggermente più grande per chiarezza */
+    max-width: 600px; /* Evita che il testo diventi troppo largo su schermi grandi */
+    margin: 0 auto; /* Centra il paragrafo */
+}
+
+.error { 
+    color: #e74c3c; 
+    text-align: center; 
+    background-color: #fbeae5; 
+    padding: 1rem; 
+    border-radius: 8px; 
+    margin-top: 1rem; /* Aggiunto spazio sopra */
+    border: 1px solid #e74c3c; /* Aggiunto bordo per più visibilità */
+}
+
+/* Stile per il messaggio di "Approfondimento dati" */
+.collecting-info {
+    text-align: center;
+    color: #007bff;
+    font-style: italic;
+    padding: 1rem;
+    background-color: #e7f3ff;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Stile per il messaggio "toast" del feedback */
+.feedback-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1001; /* Assicura che sia sopra gli altri elementi */
+    font-weight: 500;
+}
+
+
+/* --- Media Query per Dispositivi Mobili (sotto i 768px) --- */
+@media (max-width: 768px) {
+    .App {
+        /* Riduci il padding laterale per dare più spazio ai contenuti */
+        padding: 1rem; 
+    }
+
+    .App-header h1 {
+        /* Riduci la dimensione del titolo principale */
+        font-size: 2rem; 
+    }
+
+    .App-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .App-header p {
+        /* Riduci la dimensione del testo del paragrafo */
+        font-size: 1rem;
+    }
+
+    /* 
+     * Il componente SearchForm.js probabilmente ha un flex-direction: row di default.
+     * Questa regola non è necessaria qui, ma assicurati che nel CSS del componente
+     * ci sia una media query per cambiarlo in `flex-direction: column` su mobile,
+     * in modo che l'input e il pulsante si impilino verticalmente.
+     * Esempio da mettere in SearchForm.module.css:
+     * @media (max-width: 768px) {
+     *   .form {
+     *     flex-direction: column;
+     *   }
+     * }
+     */
+}
