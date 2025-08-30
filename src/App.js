@@ -76,7 +76,7 @@ function App() {
         setIsCollecting(true);
         setError('');
         try {
-            const response = await axios.post('http://localhost:3001/api/collect-more-info', {
+            const response = await axios.post('https://sparkback.onrender.com/api/collect-more-info', {
                 topic: currentTopic,
                 painPoints: painPointsToEnrich
             });
@@ -151,7 +151,7 @@ function App() {
 
     useEffect(() => {
         window.showMyFeedback = showFeedbackInConsole;
-        console.log('💡 Suggerimento: digita `showMyFeedback()` in questa console per vedere tutti i feedback raccolti e l\'email dell\'utente.');
+        //console.log('💡 Suggerimento: digita `showMyFeedback()` in questa console per vedere tutti i feedback raccolti e l\'email dell\'utente.');
 
         return () => {
             delete window.showMyFeedback;
