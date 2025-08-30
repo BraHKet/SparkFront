@@ -63,7 +63,7 @@ function App() {
         setResults([]);
         setSelectedPainPoints([]);
         try {
-            const response = await axios.post('http://localhost:3001/api/brainstorm', { topic });
+            const response = await axios.post('https://sparkback.onrender.com/api/brainstorm', { topic });
             setResults(response.data);
         } catch (err) {
             setError(err.response?.data?.error || 'Si è verificato un errore di comunicazione con il server.');
